@@ -49,7 +49,15 @@ async def delete_long_messages(client, message):
 async def delete_edited_long_messages(client, edited_message):
     if len(edited_message.text.split()) >= 1:
         await edited_message.delete()
-        
+
+
+
+# ---------------------------
+#--
+
+@copyright.on_edited_message(filters.group & ~filters.me)
+async def delete_edited_messages(client, edited_message):
+    await edited_message.delete()
 
 # -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------
