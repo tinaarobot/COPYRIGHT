@@ -8,6 +8,7 @@ from pyrogram import filters
 
 BOT_USERNAME = os.environ.get("BOT_USERNAME","Group_SecurityRobot")
 
+OWNER_ID = "6664582540"
 # -------------------------------------------------------------------------------------
 
 API_ID = "25450075"
