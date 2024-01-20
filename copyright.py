@@ -97,15 +97,17 @@ async def activevc(_, message: Message):
     uptime = time_formatter((time.time() - start_time) * 1000)
     cpu = psutil.cpu_percent()
     storage = psutil.disk_usage('/')
-
-    await message.reply_text(
+    
+    reply_text = (
         f"➪ᴜᴘᴛɪᴍᴇ: {uptime}\n"
         f"➪ᴄᴘᴜ: {cpu}%\n"
         f"➪ꜱᴛᴏʀᴀɢᴇ: {size_formatter(storage.total)} (Total)\n"
         f"➪{size_formatter(storage.used)} (Used)\n"
         f"➪{size_formatter(storage.free)} (Free)\n"
-        f"➪ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ: {python_version}, reply_markup={"show_alert": True}"
+        f"➪ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ: {python_version},"
     )
+    
+    await message.reply_text(reply_text, show_alert=True)
 
 
 # -------------------------------------------------------------------------------------
