@@ -29,6 +29,19 @@ async def delete_links_and_keywords(client, message):
 async def delete_edited_messages(client, edited_message):
     await edited_message.delete()
 
+
+
+# ----------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------
+@app.on_message(filters.group & filters.text & ~filters.me)
+async def delete_long_messages(client, message):
+    if len(message.text.split()) >= 10:
+        await message.delete()
+
+app.run()
+
+
+
 # -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------
 
