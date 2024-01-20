@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 import os
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram import filters
 
 
@@ -40,8 +40,7 @@ async def start(_, msg):
           InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/HEROKUFREECC"),
-          InlineKeyboardButton("ᴅᴇᴠ", url="https://t.me/{OWNER_ID}")
+          InlineKeyboardButton("• ʜᴀɴᴅʟᴇʀ •", callback_data="dil_back")
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -53,6 +52,22 @@ async def start(_, msg):
     )
 
 
+gd_buttons = [              
+        [
+            InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/iam_daxx"),
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/DAXXSUPPORT"),    
+        ]
+        ]
+
+
+# ------------------------------------------------------------------------------- #
+
+
+@app.on_callback_query(filters.regex("dil_back"))
+async def dil_back(_, query: CallbackQuery):
+    await query.message.edit_caption(start_txt,
+                                    reply_markup=InlineKeyboardMarkup(gd_buttons),)
+        
 
 # -------------------------------------------------------------------------------------
 
