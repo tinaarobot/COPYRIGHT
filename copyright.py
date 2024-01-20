@@ -104,7 +104,7 @@ async def activevc(_, message: Message):
         f"➪ꜱᴛᴏʀᴀɢᴇ: {size_formatter(storage.total)} (Total)\n"
         f"➪{size_formatter(storage.used)} (Used)\n"
         f"➪{size_formatter(storage.free)} (Free)\n"
-        f"➪ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ: {python_version}, show_alert=True"
+        f"➪ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ: {python_version}, reply_markup={"show_alert": True}"
     )
 
 
