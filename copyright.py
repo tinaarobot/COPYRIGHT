@@ -139,8 +139,12 @@ async def delete_edited_messages(client, edited_message):
 @app.on_message(filters.group & filters.text & ~filters.me)
 async def delete_long_messages(client, message):
     if len(message.text.split()) >= 10:
+       
+        print(f"Deleted message from {message.from_user.username}: {message.text}")
+        
+       
         await message.delete()
-
+        
 # -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------
 
