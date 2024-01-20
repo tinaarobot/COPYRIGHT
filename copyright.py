@@ -6,7 +6,7 @@ from pyrogram import filters
 
 # -------------------------------------------------------------------------------------
 
-BOT_USERNAME = os.environ.get("BOT_USERNAME")
+BOT_USERNAME = os.environ.get("BOT_USERNAME",None)
 
 # -------------------------------------------------------------------------------------
 
