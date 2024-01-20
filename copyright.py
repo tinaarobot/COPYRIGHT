@@ -1,17 +1,12 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
+import os
 
 
 API_ID = "25450075"
 API_HASH = "278e22b00d6dd565c837405eda49e6f2"
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
 
-
-API_ID = 'YOUR_API_ID'
-API_HASH = 'YOUR_API_HASH'
-
-BOT_TOKEN = 'YOUR_BOT_TOKEN'
 
 copyright = Client('my_bot', API_ID=API_ID, API_HASH=API_HASH, BOT_TOKEN=BOT_TOKEN)
 
