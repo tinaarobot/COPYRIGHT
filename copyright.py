@@ -16,7 +16,7 @@ copyright = Client('my_bot', api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOK
 
 # ----------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------
-@copyright.on_message(filters.group & filters.text & ~filters.me)
+@app.on_message(filters.group & filters.text & ~filters.me)
 async def delete_links_and_keywords(client, message):
     keywords = ["NCERT", "XII", "page", "Ans", "meiotic", "divisions", "System.in", "Scanner", "void", "nextInt"]
     
@@ -25,7 +25,7 @@ async def delete_links_and_keywords(client, message):
         
 # -------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------
-@copyright.on_edited_message(filters.group & ~filters.me)
+@app.on_edited_message(filters.group & ~filters.me)
 async def delete_edited_messages(client, edited_message):
     await edited_message.delete()
 
@@ -33,4 +33,4 @@ async def delete_edited_messages(client, edited_message):
 # -----------------------------------------------------------------------------------
 
 print(f"🎄 𝗦𝗧𝗔𝗥𝗧𝗘𝗗🎄 ")
-copyright.run()
+app.run()
