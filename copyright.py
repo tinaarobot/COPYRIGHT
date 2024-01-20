@@ -24,12 +24,33 @@ async def delete_links(client, message):
 
 # -------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------
+keywords_to_delete = ["NCERT", "XII", "page", "Ans", "meiotic", "divisions", "System.in", "Scanner", "void", "nextInt"]
 
-@copyright.on_callback_query(filters.edited_message & filters.group)
-def delete_edited_message(client, callback_query):
-    message = callback_query.message
-    client.delete_messages(message.chat.id, message.message_id)
-    
+@copyright.on_edited_message(filters.group & filters.text & ~filters.me)
+async def handle_edited_messages(client, edited_message):
+    await delete_links(client, edited_message)
+
+@copyright.on_message(filters.group & filters.text & ~filters.me)
+async def delete_links(client, message):
+    if any(keyword in message.text for keyword in keywords_to_delete) and len(message.text.split()) > 1:
+        await message.delete()
+
+@copyright.on_edited_message(filters.group & filters.text & ~filters.me)
+async def delete_edited_links(client, edited_message):
+    if any(keyword in edited_message.text for keyword in keywords_to_delete) and len(edited_message.text.split()) > 1:
+        await edited_message.delete()
+
+@copyright.on_message(filters.group & filters.text & ~filters.me)
+async def delete_long_messages(client, message):
+    if len(message.text.split()) >= 1:
+        await message.delete()
+
+@copyright.on_edited_message(filters.group & filters.text & ~filters.me)
+async def delete_edited_long_messages(client, edited_message):
+    if len(edited_message.text.split()) >= 1:
+        await edited_message.delete()
+        
+
 # -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------
 
