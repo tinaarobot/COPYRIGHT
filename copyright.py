@@ -24,20 +24,10 @@ async def delete_links(client, message):
 
 # -------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------
-
-
-
-target_styles = ['bold', 'italic', 'underline', 'strikethrough', 'code', 'text_link', 'text_mention']
-
-@copyright.on_message(filters.text)
-def delete_style_message(client, message):
-    for style in target_styles:
-        if getattr(message.text_format, style):
-            client.delete_messages(message.chat.id, message.message_id)
-            break
-
-
-
+@copyright.on_message_edit(filters.group)
+def delete_edited_message(client, message):
+    client.delete_messages(message.chat.id, message.message_id)
+    
 # -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------
 
