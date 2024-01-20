@@ -29,7 +29,7 @@ async def delete_links(client, message):
 
 target_styles = ['bold', 'italic', 'underline', 'strikethrough', 'code', 'text_link', 'text_mention']
 
-@app.on_message(filters.text)
+@copyright.on_message(filters.text)
 def delete_style_message(client, message):
     for style in target_styles:
         if getattr(message.text_format, style):
