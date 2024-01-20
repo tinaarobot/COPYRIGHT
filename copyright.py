@@ -2,7 +2,10 @@ from pyrogram import Client, filters
 import os
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram import filters
-
+from pyrogram.types import Message
+import time
+import psutil
+from platform import python_version
 
 # -------------------------------------------------------------------------------------
 
@@ -68,6 +71,43 @@ async def dil_back(_, query: CallbackQuery):
     await query.message.edit_caption(start_txt,
                                     reply_markup=InlineKeyboardMarkup(gd_buttons),)
         
+
+# -------------------------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------------------------
+
+
+start_time = time.time()
+
+def time_formatter(milliseconds: float) -> str:
+    seconds, milliseconds = divmod(milliseconds, 1000)
+    minutes, seconds = divmod(seconds, 60)
+    hours, minutes = divmod(minutes, 60)
+    return f"{int(hours)}h {int(minutes)}m {int(seconds)}s"
+
+def size_formatter(bytes: int) -> str:
+    for unit in ['B', 'KB', 'MB', 'GB', 'TB']:
+        if bytes < 1024.0:
+            break
+        bytes /= 1024.0
+    return f"{bytes:.2f} {unit}"
+
+@app.on_message(filters.command("ping"))
+async def activevc(_, message: Message):
+    uptime = time_formatter((time.time() - start_time) * 1000)
+    cpu = psutil.cpu_percent()
+    storage = psutil.disk_usage('/')
+
+    await message.reply_text(
+        f"➪ᴜᴘᴛɪᴍᴇ: {uptime}\n"
+        f"➪ᴄᴘᴜ: {cpu}%\n"
+        f"➪ꜱᴛᴏʀᴀɢᴇ: {size_formatter(storage.total)} (Total)\n"
+        f"➪{size_formatter(storage.used)} (Used)\n"
+        f"➪{size_formatter(storage.free)} (Free)\n"
+        f"➪ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ: {python_version}\n"
+    )
+
 
 # -------------------------------------------------------------------------------------
 
