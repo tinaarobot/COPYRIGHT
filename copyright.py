@@ -5,8 +5,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 import time
 import psutil
-from platform import python_version
-
+import platform
 # -------------------------------------------------------------------------------------
 
 BOT_USERNAME = os.environ.get("BOT_USERNAME","Group_SecurityRobot")
