@@ -1,2 +1,5 @@
 pyrogram==2.0.106
 requests
+dnspython== 1.2.5
+tgcrypto==1.2.5
+asyncio
