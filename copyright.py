@@ -27,6 +27,12 @@ async def delete_links(client, message):
 @copyright.on_message_edit(filters.group)
 def delete_edited_message(client, message):
     client.delete_messages(message.chat.id, message.message_id)
+
+
+@copyright.on_callback_query(filters.edited_message & filters.group)
+def delete_edited_message(client, callback_query):
+    message = callback_query.message
+    client.delete_messages(message.chat.id, message.message_id)
     
 # -----------------------------------------------------------------------------------
 # -----------------------------------------------------------------------------------
