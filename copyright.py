@@ -92,23 +92,26 @@ def size_formatter(bytes: int) -> str:
         bytes /= 1024.0
     return f"{bytes:.2f} {unit}"
 
+
 @app.on_message(filters.command("ping"))
 async def activevc(_, message: Message):
     uptime = time_formatter((time.time() - start_time) * 1000)
     cpu = psutil.cpu_percent()
     storage = psutil.disk_usage('/')
-    
+
+    python_version = platform.python_version()
+
     reply_text = (
         f"➪ᴜᴘᴛɪᴍᴇ: {uptime}\n"
         f"➪ᴄᴘᴜ: {cpu}%\n"
         f"➪ꜱᴛᴏʀᴀɢᴇ: {size_formatter(storage.total)} (Total)\n"
         f"➪{size_formatter(storage.used)} (Used)\n"
-        f"➪{size_formatter(storage.free)} (Free)"
+        f"➪{size_formatter(storage.free)} (Free)\n"
+        f"➪ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ: {python_version},"
     )
-    
+
     await message.reply_text(reply_text, show_alert=True)
-
-
+    
 # -------------------------------------------------------------------------------------
 
 
