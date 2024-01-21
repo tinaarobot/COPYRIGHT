@@ -13,7 +13,7 @@ BOT_USERNAME = os.environ.get("BOT_USERNAME","Group_SecurityRobot")
 OWNER_ID = "6664582540"
 # -------------------------------------------------------------------------------------
 
-API_ID = "25450075"
+API_ID = "6435225"
 API_HASH = "4e984ea35f854762dcde906dce426c2d"
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
 
