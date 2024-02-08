@@ -6,6 +6,13 @@ from pyrogram.types import Message
 import time
 import psutil
 import platform
+import logging
+
+import pyrogram
+from pyrogram.errors import FloodWait
+
+logging.basicConfig(level=logging.INFO)
+
 # -------------------------------------------------------------------------------------
 
 BOT_USERNAME = os.environ.get("BOT_USERNAME","Group_SecurityRobot")
@@ -119,12 +126,19 @@ async def activevc(_, message: Message):
 
 
 
-@app.on_message(filters.group & filters.text & ~filters.me)
-async def delete_links_and_keywords(client, message):
-    keywords = ["NCERT", "XII", "page", "Ans", "meiotic", "divisions", "System.in", "Scanner", "void", "nextInt"]
-    
-    if any(keyword.lower() in message.text.lower() for keyword in keywords) or any(link in message.text.lower() for link in ["http", "https", "www."]):
+FORBIDDEN_KEYWORDS = ["porn", "xxx", "sex", "NCERT", "XII", "page", "Ans", "meiotic", "divisions", "System.in", "Scanner", "void", "nextInt"]
+
+@app.on_message()
+async def handle_message(client, message):
+    if any(keyword in message.text for keyword in FORBIDDEN_KEYWORDS):
+        logging.info(f"Deleting message with ID {message.id}")
         await message.delete()
+        await message.reply_text("𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
+    elif any(keyword in message.caption for keyword in FORBIDDEN_KEYWORDS):
+        logging.info(f"Deleting message with ID {message.id}")
+        await message.delete()
+        await message.reply_text("𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
+        
         
 # -------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------
