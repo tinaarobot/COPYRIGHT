@@ -111,6 +111,7 @@ async def handle_message(client, message):
         logging.info(f"Deleting message with ID {message.message_id}")
         await message.delete()
         await message.reply_text("𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
+        
 
 # -------------------------------------------------------------------------------
 
