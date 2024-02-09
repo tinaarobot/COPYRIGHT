@@ -150,20 +150,16 @@ async def delete_edited_messages(client, edited_message):
 
 # ----------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------
-
 def delete_long_messages(_, m):
     return len(m.text.split()) > 10
 
-
-@app.on_message(filters.text & delete_long_messages)
-async def delete_and_reply(app, msg):
-    
+@app.on_message(filters.text & filters.private & delete_long_messages)
+async def delete_and_reply(_, msg):
     await msg.delete()
-    
-    
     user_mention = msg.from_user.mention
-    await bot.send_message(msg.chat.id, f"Hey {user_mention}, please keep your messages short!")
-        
+    await app.send_message(msg.chat.id, f"Hey {user_mention}, please keep your messages short!")
+    
+
 # -----------------------------------------------------------------------------------
 
 
