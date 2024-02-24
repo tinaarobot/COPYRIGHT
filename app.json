@@ -1,14 +1,36 @@
 {
-    "name": "𝗚𝗥𝗢𝗨𝗣-𝗦𝗘𝗖𝗨𝗥𝗜𝗧𝗬-𝗥𝗢𝗕𝗢𝗧",    
-    "env": {
-        "BOT_TOKEN": {
-            "description": "ғɪʟʟ Yᴏᴜʀ ʙᴏᴛ ᴛᴏᴋᴇɴ ᴏɴʟʏ",
-            "required": true
-        }              
+  "name": "telegram-bot-app",
+  "description": "Telegram Bot using Pyrogram",
+  "repository": "https://github.com/DAXXTEAM/COPYRIGHT2",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID",
+      "required": true
     },
-    "addons": [
-        {
-            "plan": "heroku-postgresql"
-        }
-    ]
+    "API_HASH": {
+      "description": "Your Telegram API Hash",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "Your Bot Username",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram User ID (Owner)",
+      "required": true
+    },
+    "LOGGER_ID": {
+      "description": "Your Logger Chat ID",
+      "required": true
+    },
+    "MONGO_URL": {
+      "description": "Your MongoDB URL",
+      "required": true
+    }
+  },
+  "stack": "heroku-22"
 }

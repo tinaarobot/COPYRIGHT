@@ -1,1 +1,1 @@
-worker: python -m copyright.py
+mrdaxx: python -m COPYRIGHT2
