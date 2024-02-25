@@ -1,3 +1,4 @@
+motor
 apscheduler
 psutil
 pymongo
