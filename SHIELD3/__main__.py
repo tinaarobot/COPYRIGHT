@@ -8,16 +8,6 @@ LOGGER_ID = -1002010924139
 
 loop = asyncio.get_event_loop()
 
-import asyncio
-import importlib
-from pyrogram import idle
-from COPYRIGHT2 import COPYRIGHT2
-from COPYRIGHT2.modules import ALL_MODULES
-
-LOGGER_ID = -1002006622740
-
-loop = asyncio.get_event_loop()
-
 async def roy_boot():
     for all_module in ALL_MODULES:
         importlib.import_module("COPYRIGHT2.modules." + all_module)
