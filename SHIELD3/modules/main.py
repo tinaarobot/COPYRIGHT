@@ -121,14 +121,14 @@ EVAA = [
 
 @app.on_callback_query(filters.regex("roy_back"))
 async def roy_back(_, query: CallbackQuery):
-    await query.message.edit_caption(ABOUT_STRING,
+    await query.message.edit_caption(HELP_STRING,
                                     reply_markup=InlineKeyboardMarkup(ROY_BTN),)
 
 # ------------------------------------------------------------------------------- #
 REPO_STRING = """**
-✦ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ !
+✦ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ...
 
-❅ ɪ ᴀᴍ ᴄᴏᴘʏʀɪɢʜᴛ sʜɪᴇʟᴅ ʙᴏᴛ.
+❅ ɪ ᴀᴍ ᴄᴏᴘʏʀɪɢʜᴛ sʜɪᴇʟᴅ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ʙᴏᴛ.
 
 ❅ ɪғ ʏᴏᴜ ᴡᴀɴᴛ **ᴄᴏᴘʏʀɪɢʜᴛ sʜɪᴇʟᴅ** ʙᴏᴛ ʀᴇᴘᴏ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʀᴇᴘᴏ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.**
 """
@@ -189,7 +189,7 @@ async def activevc(_, message: Message):
         f"✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠  ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐"
     )
 
-    await message.reply_photo(random.choice(NYKAA), reply_text, reply_markup=InlineKeyboardMarkup(EVAA), quote=True)
+    await message.reply(reply_text, reply_markup=InlineKeyboardMarkup(EVAA), quote=True)
 
 # -------------------------------------------------------------------------------------
 
