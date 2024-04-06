@@ -1,4 +1,4 @@
-motor
+motor==3.4.0
 apscheduler
 psutil
 pymongo
