@@ -2,4 +2,4 @@ build:
   docker:
     worker: Dockerfile
 run:
-  mrdaxx: python3 -m COPYRIGHT2
+  mrdaxx: python3 -m SHIELD3
