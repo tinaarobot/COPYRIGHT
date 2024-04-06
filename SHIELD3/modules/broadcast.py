@@ -26,12 +26,12 @@ async def send_msg(user_id, message):
         return 500, f"{user_id} : {traceback.format_exc()}\n"
 
 
-@app.on_message(filters.command("broadcast") & filters.user(OWNER_ID))
+@app.on_message(filters.command("bcast") & filters.user(OWNER_ID))
 async def broadcast(_, message):
     if not message.reply_to_message:
-        await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ɪᴛ.")
+        await message.reply_text("✦ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ɪᴛ.")
         return    
-    exmsg = await message.reply_text("sᴛᴀʀᴛᴇᴅ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ!")
+    exmsg = await message.reply_text("✦ sᴛᴀʀᴛᴇᴅ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ !")
     all_chats = (await get_chats()) or {}
     all_users = (await get_users()) or {}
     done_chats = 0
@@ -57,11 +57,11 @@ async def broadcast(_, message):
             failed_users += 1
     if failed_users == 0 and failed_chats == 0:
         await exmsg.edit_text(
-            f"**sᴜᴄᴄᴇssғᴜʟʟʏ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ✅**\n\n**sᴇɴᴛ ᴍᴇssᴀɢᴇ ᴛᴏ** `{done_chats}` **ᴄʜᴀᴛs ᴀɴᴅ** `{done_users}` **ᴜsᴇʀs**",
+            f"**✦ sᴜᴄᴄᴇssғᴜʟʟʏ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ♥︎**\n\n❅ **ᴄʜᴀᴛs** ➠ `{done_chats}`\n❅ **ᴜsᴇʀs** ➠ `{done_users}` ",
         )
     else:
         await exmsg.edit_text(
-            f"**sᴜᴄᴄᴇssғᴜʟʟʏ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ✅**\n\n**sᴇɴᴛ ᴍᴇssᴀɢᴇ ᴛᴏ** `{done_chats}` **ᴄʜᴀᴛs** `{done_users}` **ᴜsᴇʀs**\n\n**ɴᴏᴛᴇ:-** `ᴅᴜᴇ ᴛᴏ sᴏᴍᴇ ɪssᴜᴇ ᴄᴀɴ'ᴛ ᴀʙʟᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ` `{failed_users}` **ᴜsᴇʀs ᴀɴᴅ** `{failed_chats}` **ᴄʜᴀᴛs**",
+            f"**✦ sᴜᴄᴄᴇssғᴜʟʟʏ ʙʀᴏᴀᴅᴄᴀsᴛɪɴɢ ♥︎**\n\n❅ **ᴄʜᴀᴛs** ➠ `{done_chats}` \n❅ **ᴜsᴇʀs** ➠ `{done_users}` \n\n**✦ ɴᴏᴛᴇ ➥ ** `ᴅᴜᴇ ᴛᴏ sᴏᴍᴇ ɪssᴜᴇ ᴄᴀɴ'ᴛ ᴀʙʟᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ`\n\n❅ **ғᴀɪʟᴅ ᴜsᴇʀs** ➠ `{failed_users}`\n❅ **ғᴀɪʟᴅ ᴄʜᴀᴛs** ➠ `{failed_chats}` ",
         )
 
 
@@ -73,7 +73,7 @@ async def announced(_, message):
     if message.reply_to_message:
       to_send=message.reply_to_message.id
     if not message.reply_to_message:
-      return await message.reply_text("Reply To Some Post To Broadcast")
+      return await message.reply_text("✦ ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ ғᴏʀ ᴀɴɴᴏᴜɴᴄᴇ.")
     chats = await get_chats() or []
     users = await get_users() or []
     print(chats)
@@ -95,5 +95,5 @@ async def announced(_, message):
         failed_user += 1
 
 
-    await message.reply_text("Bʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴘʟᴇᴛᴇ. {} ɢʀᴏᴜᴘs ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴛʜᴇ ᴍᴇssᴀɢᴇ, ᴘʀᴏʙᴀʙʟʏ ᴅᴜᴇ ᴛᴏ ʙᴇɪɴɢ ᴋɪᴄᴋᴇᴅ. {} ᴜsᴇʀs ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴛʜᴇ ᴍᴇssᴀɢᴇ, ᴘʀᴏʙᴀʙʟʏ ᴅᴜᴇ ᴛᴏ ʙᴇɪɴɢ ʙᴀɴɴᴇᴅ. .".format(failed, failed_user))
+    await message.reply_text("✦ ʙʀᴏᴀᴅᴄᴀsᴛ ᴄᴏᴍᴘʟᴇᴛᴇ {} ɢʀᴏᴜᴘs ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴛʜᴇ ᴍᴇssᴀɢᴇ, ᴘʀᴏʙᴀʙʟʏ ᴅᴜᴇ ᴛᴏ ʙᴇɪɴɢ ᴋɪᴄᴋᴇᴅ. {} ᴜsᴇʀs ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴄᴇɪᴠᴇ ᴛʜᴇ ᴍᴇssᴀɢᴇ, ᴘʀᴏʙᴀʙʟʏ ᴅᴜᴇ ᴛᴏ ʙᴇɪɴɢ ʙᴀɴɴᴇᴅ. .".format(failed, failed_user))
       
