@@ -4,6 +4,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 from pyrogram import filters
 from pyrogram.types import Message
 import time
+import random
 import psutil
 import platform
 import logging
@@ -15,10 +16,6 @@ import pyrogram
 from pyrogram.errors import FloodWait
 
 
-# ----------------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------------------
-
-# -------------------------------------------------------------------------------------
 
 
 start_txt = """<b> 🤖 𝖦𝗋𝗈𝗎𝗉 𝖲𝖾𝖼𝗎𝗋𝗂𝗍𝗒 𝖱𝗈𝖻𝗈𝗍 🛡️ </b>
@@ -34,7 +31,7 @@ async def start(_, msg):
           InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("• ʜᴀɴᴅʟᴇʀ •", callback_data="dil_back")
+          InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇs", callback_data="dil_back")
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
