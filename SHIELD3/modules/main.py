@@ -118,21 +118,15 @@ REPO_STRING = """<b> ❍ ʜᴇʏ {user_mention}, ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ 
 @app.on_message(filters.command("repo"))
 async def start(_, msg):
     REPO_BTN = [
-        [ 
-          InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-        ],
         [
-          InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="nykaa_back"),
-          InlineKeyboardButton("ʜᴇʟᴘ", callback_data="roy_back")
-        ],
-        [
-          InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
-        ]
+          InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/the_friendz"),
+          InlineKeyboardButton("ʀᴇᴘᴏ", url="https://github.com/tinaarobot/ROYMUSIC"),
+          ],
     ]
     
     reply_markup = InlineKeyboardMarkup(REPO_BTN)
     
-    await msg.reply_photo(photo="", caption=start_txt,reply_markup=reply_markup
+    await msg.reply_photo(photo="https://graph.org/file/33bc093c89898dcc318ae.jpg", caption=start_txt,reply_markup=reply_markup
                          )
 
 
