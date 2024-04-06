@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 import os
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from pyrogram.types import *
 from pyrogram import filters
-from pyrogram.types import Message
+
 import time
 import random
 import psutil
@@ -105,7 +105,7 @@ async def cutebackbutton(client, CallbackQuery, _):
           InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
         ]
     ]
-     await CallbackQuery.edit_message_text(start_txt,
+    await CallbackQuery.edit_message_text(start_txt,
             reply_markup = InlineKeyboardMarkup(startkeyboard)
             )
     
