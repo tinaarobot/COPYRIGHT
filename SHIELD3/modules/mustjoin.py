@@ -2,7 +2,7 @@ import random
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
-from SHIELD3 import app
+from SHIELD3 import SHIELD3 as app
 
 MISHI = [
     "https://graph.org/file/f86b71018196c5cfe7344.jpg",
