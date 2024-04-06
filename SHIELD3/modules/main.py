@@ -86,7 +86,7 @@ gd_buttons = [
 
 @app.on_callback_query(filters.regex("dil_back"))
 async def dil_back(_, query: CallbackQuery):
-    await query.message.edit_caption(start_txt,
+    await query.message.edit_caption(HELP_STRING,
                                     reply_markup=InlineKeyboardMarkup(gd_buttons),)
         
 
@@ -145,15 +145,15 @@ FORBIDDEN_KEYWORDS = ["porn", "xxx", "sex", "NCERT", "XII", "page", "Ans", "meio
 @app.on_message()
 async def handle_message(client, message):
     if any(keyword in message.text for keyword in FORBIDDEN_KEYWORDS):
-        logging.info(f"Deleting message with ID {message.id}")
+        logging.info(f"✦ Deleting message with ID {message.id}")
         await message.delete()
       #  user_mention = from_user.mention
-        await message.reply_text(f"@{message.from_user.username} 𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
+        await message.reply_text(f"✦ @{message.from_user.username} 𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
     elif any(keyword in message.caption for keyword in FORBIDDEN_KEYWORDS):
-        logging.info(f"Deleting message with ID {message.id}")
+        logging.info(f"✦ Deleting message with ID {message.id}")
         await message.delete()
        # user_mention = from_user.mention
-        await message.reply_text(f"@{message.from_user.username} 𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
+        await message.reply_text(f"✦ @{message.from_user.username} 𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
         
         
 # -------------------------------------------------------------------------------------
@@ -173,7 +173,7 @@ def delete_long_messages(_, m):
 async def delete_and_reply(_, msg):
     await msg.delete()
     user_mention = msg.from_user.mention
-    await app.send_message(msg.chat.id, f"Hey {user_mention}, please keep your messages short!")
+    await app.send_message(msg.chat.id, f"✦ Hey {user_mention}, please keep your messages short!")
     
 
 # -----------------------------------------------------------------------------------
@@ -187,7 +187,7 @@ async def keep_reaction_message(client, message: Message):
 
 async def delete_pdf_files(client, message):
     if message.document and message.document.mime_type == "application/pdf":
-        warning_message = f"@{message.from_user.username} ᴍᴀᴀ ᴍᴀᴛ ᴄʜᴜᴅᴀ ᴘᴅғ ʙʜᴇᴊ ᴋᴇ,\n ʙʜᴏsᴀᴅɪᴋᴇ ᴄᴏᴘʏʀɪɢʜᴛ ʟᴀɢʏᴇɢᴀ \n\n ᴅᴇʟᴇᴛᴇ ᴋᴀʀ ᴅɪʏᴀ ᴍᴀᴅᴀʀᴄʜᴏᴅ.\n\n ᴀʙ @OP_SHIVA_007 ʙʜᴀɪ ᴋᴇ ᴅᴍ ᴍᴇ ᴀᴘɴɪ ᴍᴜᴍᴍʏ ᴋᴏ ʙʜᴇᴊ ᴅᴇ 🍌🍌🍌."
+        warning_message = f"✦ @{message.from_user.username} ᴍᴀᴀ ᴍᴀᴛ ᴄʜᴜᴅᴀ ᴘᴅғ ʙʜᴇᴊ ᴋᴇ,\n ʙʜᴏsᴀᴅɪᴋᴇ ᴄᴏᴘʏʀɪɢʜᴛ ʟᴀɢʏᴇɢᴀ \n\n ᴅᴇʟᴇᴛᴇ ᴋᴀʀ ᴅɪʏᴀ ᴍᴀᴅᴀʀᴄʜᴏᴅ.\n\n ᴀʙ @h_cc_help ʙʜᴀɪ ᴋᴇ ᴅᴍ ᴍᴇ ᴀᴘɴɪ ᴍᴜᴍᴍʏ ᴋᴏ ʙʜᴇᴊ ᴅᴇ 🍌🍌🍌."
         await message.reply_text(warning_message)
         await message.delete()
     else:  
