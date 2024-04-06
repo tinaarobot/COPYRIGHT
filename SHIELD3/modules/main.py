@@ -77,7 +77,7 @@ async def start(_, msg):
 
 gd_buttons = [              
         [
-            InlineKeyboardButton("ᴏᴡɴᴇʀ", user_id=OWNER_ID),
+            InlineKeyboardButton("back", callback_data="cuteback"),
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/THE_FRIENDZ"),    
         ]
         ]
@@ -85,12 +85,16 @@ gd_buttons = [
 
 ROY_BTN = [              
         [
-            InlineKeyboardButton("ᴏᴡɴᴇʀ", user_id=OWNER_ID),
+            InlineKeyboardButton("back", callback_data="cuteback"),
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/THE_FRIENDZ"),    
         ]
 ]
 # ------------------------------------------------------------------------------- #
 
+
+@app.on_callback_query(filters.regex("cuteback"))
+async def cutebackbutton(client, CallbackQuery, _):
+    
 
 @app.on_callback_query(filters.regex("nykaa_back"))
 async def nykaa_back(_, query: CallbackQuery):
