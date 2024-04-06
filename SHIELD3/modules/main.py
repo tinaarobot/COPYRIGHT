@@ -94,21 +94,21 @@ ROY_BTN = [
 
 @app.on_callback_query(filters.regex("nykaa_back"))
 async def nykaa_back(_, query: CallbackQuery):
-    await query.message.edit_caption(HELP_STRING,
+    await query.message.edit_caption(ABOUT_STRING,
                                     reply_markup=InlineKeyboardMarkup(gd_buttons),)
         
 
 # -------------------------------------------------------------------------------------
 
 
-HELP_STRING = """**✦ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs.\n\n❍ ɴᴏ ᴘᴏʀɴᴏɢʀᴀᴘʜʏ \n❍ ɴᴏ ᴍᴇssᴀɢᴇ ᴇᴅɪᴛ\n❍ ɴᴏ ᴘᴅғ ғɪʟᴇ sʜᴀʀᴇ\n❍ ɴᴏ ʟᴏɴɢ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ\n❍ ɴᴏ sᴘᴀᴍᴍᴇʀ ʀᴇᴘᴏʀᴛs\n❍ ɴᴏ ɴᴄᴇʀᴛ ᴄᴏɴᴛᴇsᴛ\n\n✦ ᴀɴᴅ ᴍᴏʀᴇ ᴄᴏɴᴛᴇsᴛs ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ, ғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ.**"""
+ABOUT_STRING = """**✦ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs.\n\n❍ ɴᴏ ᴘᴏʀɴᴏɢʀᴀᴘʜʏ \n❍ ɴᴏ ᴍᴇssᴀɢᴇ ᴇᴅɪᴛ\n❍ ɴᴏ ᴘᴅғ ғɪʟᴇ sʜᴀʀᴇ\n❍ ɴᴏ ʟᴏɴɢ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ\n❍ ɴᴏ sᴘᴀᴍᴍᴇʀ ʀᴇᴘᴏʀᴛs\n❍ ɴᴏ ɴᴄᴇʀᴛ ᴄᴏɴᴛᴇsᴛ\n\n✦ ᴀɴᴅ ᴍᴏʀᴇ ᴄᴏɴᴛᴇsᴛs ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ, ғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ.**"""
 
 
 # -------------------------------------------------------------------------------------
 
 @app.on_callback_query(filters.regex("roy_back"))
 async def roy_back(_, query: CallbackQuery):
-    await query.message.edit_caption(HELP_STRING,
+    await query.message.edit_caption(ABOUT_STRING,
                                     reply_markup=InlineKeyboardMarkup(ROY_BTN),)
 
 # ------------------------------------------------------------------------------- #
@@ -126,7 +126,7 @@ async def start(_, msg):
     
     reply_markup = InlineKeyboardMarkup(REPO_BTN)
     
-    await msg.reply_photo(photo="https://graph.org/file/33bc093c89898dcc318ae.jpg", caption=start_txt,reply_markup=reply_markup
+    await msg.reply_photo(photo="https://graph.org/file/33bc093c89898dcc318ae.jpg", caption=REPO_STRING,reply_markup=reply_markup
                          )
 
 
