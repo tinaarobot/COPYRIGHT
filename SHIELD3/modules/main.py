@@ -66,8 +66,7 @@ async def start(_, msg):
           InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
         ]
     ]
-    
-    reply_markup = InlineKeyboardMarkup(buttons)
+     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(random.choice(NYKAA), caption=start_txt,reply_markup=reply_markup
     )
@@ -94,6 +93,22 @@ ROY_BTN = [
 
 @app.on_callback_query(filters.regex("cuteback"))
 async def cutebackbutton(client, CallbackQuery, _):
+    startkeyboard = [
+        [ 
+          InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+        ],
+        [
+          InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="nykaa_back"),
+          InlineKeyboardButton("ʜᴇʟᴘ", callback_data="roy_back")
+        ],
+        [
+          InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
+        ]
+    ]
+     await CallbackQuery.edit_message_text(start_txt,
+            reply_markup = InlineKeyboardMarkup(startkeyboard)
+            )
+    
     
 
 @app.on_callback_query(filters.regex("nykaa_back"))
