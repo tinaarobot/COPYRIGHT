@@ -50,7 +50,7 @@ NYKAA = [
 ]
 
 
-start_txt = """<b> ❍ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ !\n━━━━━━━━━━━━━━━━━━━━━━\n\n❍ ɪ ᴀᴍ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴄᴏᴘʏʀɪɢʜᴛ ʙᴏᴛ.\n\n❍ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs. </b>\n\n❍ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ⚘ ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐ """
+start_txt = """<b> ❍ ʜᴇʏ {user_mention}, ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ !\n━━━━━━━━━━━━━━━━━━━━━━\n\n❍ ɪ ᴀᴍ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴄᴏᴘʏʀɪɢʜᴛ ʙᴏᴛ.\n\n❍ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs. </b>\n\n❍ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ⚘ ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐ """
 
 @app.on_message(filters.command("start"))
 async def start(_, msg):
@@ -59,7 +59,7 @@ async def start(_, msg):
           InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇs", callback_data="dil_back"),
+          InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇs", callback_data="nykaa_back"),
           InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/roy_editx")
         ],
         [
@@ -84,8 +84,8 @@ gd_buttons = [
 # ------------------------------------------------------------------------------- #
 
 
-@app.on_callback_query(filters.regex("dil_back"))
-async def dil_back(_, query: CallbackQuery):
+@app.on_callback_query(filters.regex("nykaa_back"))
+async def nykaa_back(_, query: CallbackQuery):
     await query.message.edit_caption(HELP_STRING,
                                     reply_markup=InlineKeyboardMarkup(gd_buttons),)
         
@@ -94,6 +94,12 @@ async def dil_back(_, query: CallbackQuery):
 HELP_STRING = """**✦ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs.\n\n❍ ɴᴏ ᴘᴏʀɴᴏɢʀᴀᴘʜʏ \n❍ ɴᴏ ᴍᴇssᴀɢᴇ ᴇᴅɪᴛ\n❍ ɴᴏ ᴘᴅғ ғɪʟᴇ sʜᴀʀᴇ\n❍ ɴᴏ ʟᴏɴɢ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ\n❍ ɴᴏ sᴘᴀᴍᴍᴇʀ ʀᴇᴘᴏʀᴛs\n❍ ɴᴏ ɴᴄᴇʀᴛ ᴄᴏɴᴛᴇsᴛ\n\n✦ ᴀɴᴅ ᴍᴏʀᴇ ᴄᴏɴᴛᴇsᴛs ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ, ғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ.**"""
 
 # -------------------------------------------------------------------------------------
+
+@app.on_callback_query(filters.regex("roy_back"))
+async def roy_back(_, query: CallbackQuery):
+    await query.message.edit_caption(HELP_STRING,
+                                    reply_markup=InlineKeyboardMarkup(gd_buttons),)
+
 
 
 start_time = time.time()
@@ -134,27 +140,22 @@ async def activevc(_, message: Message):
 
     await message.reply(reply_text, quote=True)
 
-
-    
 # -------------------------------------------------------------------------------------
-
-
 
 FORBIDDEN_KEYWORDS = ["porn", "xxx", "sex", "NCERT", "XII", "page", "Ans", "meiotic", "divisions", "System.in", "Scanner", "void", "nextInt"]
 
 @app.on_message()
 async def handle_message(client, message):
     if any(keyword in message.text for keyword in FORBIDDEN_KEYWORDS):
-        logging.info(f"✦ Deleting message with ID {message.id}")
+        logging.info(f"✦ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ {message.id}")
         await message.delete()
       #  user_mention = from_user.mention
-        await message.reply_text(f"✦ @{message.from_user.username} 𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
+        await message.reply_text(f"✦ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ ɴᴇxᴛ ᴛɪᴍᴇ.")
     elif any(keyword in message.caption for keyword in FORBIDDEN_KEYWORDS):
-        logging.info(f"✦ Deleting message with ID {message.id}")
+        logging.info(f"✦ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ {message.id}")
         await message.delete()
        # user_mention = from_user.mention
-        await message.reply_text(f"✦ @{message.from_user.username} 𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
-        
+        await message.reply_text(f"✦ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ, ɴᴇxᴛ ᴛɪᴍᴇ.")
         
 # -------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------
@@ -173,21 +174,21 @@ def delete_long_messages(_, m):
 async def delete_and_reply(_, msg):
     await msg.delete()
     user_mention = msg.from_user.mention
-    await app.send_message(msg.chat.id, f"✦ Hey {user_mention}, please keep your messages short!")
+    await app.send_message(msg.chat.id, f"✦ ʜᴇʏ {user_mention} ʙᴀʙʏ, ᴘʟᴇᴀsᴇ ᴋᴇᴇᴘ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ sʜᴏʀᴛ.")
     
 
 # -----------------------------------------------------------------------------------
 
 
     
-@app.on_message(filters.animation | filters.audio | filters.document | filters.photo | filters.sticker | filters.video)
-async def keep_reaction_message(client, message: Message):
-    pass 
+#@app.on_message(filters.animation | filters.audio | filters.document | filters.photo | filters.sticker | filters.video)
+#async def keep_reaction_message(client, message: Message):
+  #  pass 
 # -------------------------------
 
 async def delete_pdf_files(client, message):
     if message.document and message.document.mime_type == "application/pdf":
-        warning_message = f"✦ @{message.from_user.username} ᴍᴀᴀ ᴍᴀᴛ ᴄʜᴜᴅᴀ ᴘᴅғ ʙʜᴇᴊ ᴋᴇ,\n ʙʜᴏsᴀᴅɪᴋᴇ ᴄᴏᴘʏʀɪɢʜᴛ ʟᴀɢʏᴇɢᴀ \n\n ᴅᴇʟᴇᴛᴇ ᴋᴀʀ ᴅɪʏᴀ ᴍᴀᴅᴀʀᴄʜᴏᴅ.\n\n ᴀʙ @h_cc_help ʙʜᴀɪ ᴋᴇ ᴅᴍ ᴍᴇ ᴀᴘɴɪ ᴍᴜᴍᴍʏ ᴋᴏ ʙʜᴇᴊ ᴅᴇ 🍌🍌🍌."
+        warning_message = f"✦ ʜᴇʏ {user_mention} ᴅᴏɴ'ᴛ sᴇɴᴅ ᴘᴅғ ғɪʟᴇs ʙᴀʙʏ, ғᴏʀ ᴄᴏᴘʏʀɪɢʜᴛ ᴄʟɪᴍʙ."
         await message.reply_text(warning_message)
         await message.delete()
     else:  
