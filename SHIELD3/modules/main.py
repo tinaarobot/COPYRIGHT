@@ -59,7 +59,8 @@ async def start(_, msg):
           InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇs", callback_data="dil_back")
+          InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇs", callback_data="dil_back"),
+          InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/roy_editx")
         ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
