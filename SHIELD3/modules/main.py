@@ -189,7 +189,7 @@ async def activevc(_, message: Message):
         f"✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠  ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐"
     )
 
-    await message.reply(reply_text, quote=True)
+    await message.reply_photo(random.choice(NYKAA), reply_text, reply_markup=InlineKeyboardMarkup(EVAA), quote=True)
 
 # -------------------------------------------------------------------------------------
 
