@@ -92,22 +92,26 @@ ROY_BTN = [
 
 
 @app.on_callback_query(filters.regex("cuteback"))
-async def cutebackbutton(client, callback_query: CallbackQuery, _):  # hehe
-    startkeyboard = [
-        [ 
-          InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
-        ],
-        [
-          InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="nykaa_back"),
-          InlineKeyboardButton("ʜᴇʟᴘ", callback_data="roy_back")
-        ],
-        [
-          InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
+async def cutebackbutton(client, callback_query: CallbackQuery, _):  
+    try:
+        startkeyboard = [
+            [ 
+              InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+            ],
+            [
+              InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="nykaa_back"),
+              InlineKeyboardButton("ʜᴇʟᴘ", callback_data="roy_back")
+            ],
+            [
+              InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
+            ]
         ]
-    ]
-    await callback_query.message.edit_caption(start_txt,  # hmm
-            reply_markup=InlineKeyboardMarkup(startkeyboard)
-            )
+        await callback_query.message.edit_caption(start_txt,  
+                reply_markup=InlineKeyboardMarkup(startkeyboard)
+                )
+    except Exception as e:
+        error_message = f"An error occurred: {str(e)}"
+        await callback_query.message.reply_text(error_message)
 
     
 
