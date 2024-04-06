@@ -110,7 +110,11 @@ HELP_STRING = """**✽ ᴏᴡɴᴇʀ/sᴜᴅᴏ ᴜsᴇʀ ᴄᴍᴅs ⏤͟͟͞͞
 
 # ------------------------------------------------------------------------------- #
 
-
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+    ],
+]
 
 # ------------------------------------------------------------------------------- #
 
@@ -140,7 +144,7 @@ async def start(_, msg):
     
     reply_markup = InlineKeyboardMarkup(REPO_BTN)
     
-    await msg.reply_photo(photo="https://graph.org/file/33bc093c89898dcc318ae.jpg", caption=REPO_STRING,reply_markup=reply_markup
+    await msg.reply_photo(random.choice(NYKAA), caption=REPO_STRING,reply_markup=reply_markup
                          )
 
 
