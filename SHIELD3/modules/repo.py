@@ -2,6 +2,16 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from SHIELD3 import SHIELD3 as app
 from config import BOT_USERNAME
+from pyrogram.types import Message
+import os
+import time
+import psutil
+import platform
+import logging
+from config import OWNER_ID, BOT_USERNAME
+from config import *
+import pyrogram
+from pyrogram.errors import FloodWait
 
 start_txt = """
 ✦ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ !
