@@ -50,7 +50,7 @@ NYKAA = [
 ]
 
 
-start_txt = """<b> ❅ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ !\n━━━━━━━━━━━━━━━━━━━━━━\n\n❅ ɪ ᴀᴍ {}, ᴀɴᴅ ɪ ʜᴀᴠᴇ sᴘᴇᴄɪᴀʟ ғᴇᴀᴛᴜʀᴇs.\n\n❅ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs. </b> """
+start_txt = """<b> ❅ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ !\n━━━━━━━━━━━━━━━━━━━━━━\n\n❅ ɪ ᴀᴍ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴄᴏᴘʏʀɪɢʜᴛ ʙᴏᴛ.\n\n❅ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs. </b>\n\n✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ⚘ ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐ """
 
 @app.on_message(filters.command("start"))
 async def start(_, msg):
@@ -61,7 +61,11 @@ async def start(_, msg):
         [
           InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇs", callback_data="dil_back"),
           InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/roy_editx")
-        ]]
+        ],
+        [
+          InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
+        ]
+    ]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
@@ -118,12 +122,14 @@ async def activevc(_, message: Message):
     python_version = platform.python_version()
 
     reply_text = (
-        f"➪ᴜᴘᴛɪᴍᴇ: {uptime}\n"
-        f"➪ᴄᴘᴜ: {cpu}%\n"
-        f"➪ꜱᴛᴏʀᴀɢᴇ: {size_formatter(storage.total)} [ᴛᴏᴛᴀʟ]\n"
-        f"➪{size_formatter(storage.used)} [ᴜsᴇᴅ]\n"
-        f"➪{size_formatter(storage.free)} [ғʀᴇᴇ]\n"
-        f"➪ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ: {python_version},"
+        f"✦ ᴄᴏᴘʏʀɪɢʜᴛ ʙᴏᴛ ᴘɪɴɢ sᴛᴀᴛs ✦\n\n"
+        f"❅ ᴜᴘᴛɪᴍᴇ ➠ {uptime}\n"
+        f"❅ ᴄᴘᴜ ➠ {cpu}%\n"
+        f"❅ ᴛᴏᴛᴇʟ ꜱᴛᴏʀᴀɢᴇ ➠ {size_formatter(storage.total)}\n"
+        f"❅ ᴜsᴇᴅ ➠ {size_formatter(storage.used)}\n"
+        f"❅ ғʀᴇᴇ ➠ {size_formatter(storage.free)}\n"
+        f"❅ ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠ {python_version}\n\n"
+        f"✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠  ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐,"
     )
 
     await message.reply(reply_text, quote=True)
@@ -192,4 +198,24 @@ async def message_handler(client, message):
     await delete_pdf_files(client, message)
 
 # ----------------------------------------
-                
+
+@app.on_callback_query(filters.regex("gib_source"))
+async def gib_repo_callback(_, callback_query):
+    await callback_query.edit_message_media(
+        media=InputMediaVideo("https://telegra.ph/file/9235d57807362b4e227a3.mp4", has_spoiler=True),
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [close_button]
+            ]
+        ),
+        )
+close_button = InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
+
+@app.on_callback_query(filters.regex("close"))
+async def close_menu(_, CallbackQuery):
+    try:
+        await CallbackQuery.message.delete()
+        await CallbackQuery.answer()
+    except:
+        return
+        
