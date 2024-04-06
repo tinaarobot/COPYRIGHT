@@ -8,7 +8,7 @@ LOGGER_ID = -1002010924139
 
 loop = asyncio.get_event_loop()
 
-async def daxxpapa_boot():
+async def royeditx_bot():
     for all_module in ALL_MODULES:
         importlib.import_module("SHIELD3.modules." + all_module)
     print("𝖻𝗈𝗍 𝗌𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅 𝗌𝗍𝖺𝗋𝗍")
@@ -17,5 +17,5 @@ async def daxxpapa_boot():
     await SHIELD3.send_message(LOGGER_ID, "**𝖨 𝖺𝗆 𝖺𝗅𝗂𝗏𝖾 𝖡𝖺𝖻𝗒 𝖸𝗈𝗎𝗋 𝖡𝗈𝗍 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅 𝖣𝖾𝗉𝗅𝗈𝗒 \n Mʏ Dᴇᴠᴇʟᴏᴘᴇʀ  [ᶦτͫ𝒛⃪ͤ ꯭𝐒ʜɪᴠ𝆺꯭𝅥.ۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗۗ ༎𓆪─̶̶⃛͢🐼⛧‌ٖٖٖٖٖٖٜٖٖٖٖ](https://t.me/OP_SHIVA_007)**")
 
 if __name__ == "__main__":
-    loop.run_until_complete(daxxpapa_boot())
+    loop.run_until_complete(royeditx_bot())
 
