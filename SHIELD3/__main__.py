@@ -14,7 +14,7 @@ async def royeditx_bot():
     print("♥︎ BOT SUCCESSFULLY STARTED.")
     await idle()
     print("♥︎ @The_Friendz ♥︎ @H_CC_Help ♥︎ @RoY_EdiTX")
-    await SHIELD3.send_message(LOGGER_ID, "**✦ ʙᴏᴛ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇᴘʟᴏʏᴇᴅ.**")
+    await SHIELD3.send_message(LOGGER_ID, "**✦ Bot deployed successfully.**")
 
 if __name__ == "__main__":
     loop.run_until_complete(royeditx_bot())
