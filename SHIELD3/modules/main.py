@@ -72,6 +72,8 @@ async def start(_, msg):
     await msg.reply_photo(random.choice(NYKAA), caption=start_txt,reply_markup=reply_markup
     )
 
+# ------------------------------------------------------------------------------- #
+
 
 gd_buttons = [              
         [
@@ -79,8 +81,14 @@ gd_buttons = [
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/THE_FRIENDZ"),    
         ]
         ]
+# ------------------------------------------------------------------------------- #
 
-
+ROY_BTN = [              
+        [
+            InlineKeyboardButton("ᴏᴡɴᴇʀ", user_id=OWNER_ID),
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/THE_FRIENDZ"),    
+        ]
+]
 # ------------------------------------------------------------------------------- #
 
 
@@ -91,16 +99,45 @@ async def nykaa_back(_, query: CallbackQuery):
         
 
 # -------------------------------------------------------------------------------------
+
+
 HELP_STRING = """**✦ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs.\n\n❍ ɴᴏ ᴘᴏʀɴᴏɢʀᴀᴘʜʏ \n❍ ɴᴏ ᴍᴇssᴀɢᴇ ᴇᴅɪᴛ\n❍ ɴᴏ ᴘᴅғ ғɪʟᴇ sʜᴀʀᴇ\n❍ ɴᴏ ʟᴏɴɢ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ\n❍ ɴᴏ sᴘᴀᴍᴍᴇʀ ʀᴇᴘᴏʀᴛs\n❍ ɴᴏ ɴᴄᴇʀᴛ ᴄᴏɴᴛᴇsᴛ\n\n✦ ᴀɴᴅ ᴍᴏʀᴇ ᴄᴏɴᴛᴇsᴛs ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ, ғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ.**"""
+
 
 # -------------------------------------------------------------------------------------
 
 @app.on_callback_query(filters.regex("roy_back"))
 async def roy_back(_, query: CallbackQuery):
     await query.message.edit_caption(HELP_STRING,
-                                    reply_markup=InlineKeyboardMarkup(gd_buttons),)
+                                    reply_markup=InlineKeyboardMarkup(ROY_BTN),)
+
+# ------------------------------------------------------------------------------- #
+
+REPO_STRING = """<b> ❍ ʜᴇʏ {user_mention}, ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ !\n━━━━━━━━━━━━━━━━━━━━━━\n\n❍ ɪ ᴀᴍ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴄᴏᴘʏʀɪɢʜᴛ ʙᴏᴛ.\n\n❍ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs. </b>\n\n❍ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ⚘ ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐ """
+
+@app.on_message(filters.command("repo"))
+async def start(_, msg):
+    REPO_BTN = [
+        [ 
+          InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+        ],
+        [
+          InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="nykaa_back"),
+          InlineKeyboardButton("ʜᴇʟᴘ", callback_data="roy_back")
+        ],
+        [
+          InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
+        ]
+    ]
+    
+    reply_markup = InlineKeyboardMarkup(REPO_BTN)
+    
+    await msg.reply_photo(photo="", caption=start_txt,reply_markup=reply_markup
+                         )
 
 
+
+# ------------------------------------------------------------------------------- #
 
 start_time = time.time()
 
@@ -117,6 +154,8 @@ def size_formatter(bytes: int) -> str:
         bytes /= 1024.0
     return f"{bytes:.2f} {unit}"
 
+
+# ------------------------------------------------------------------------------- #
 
 
 @app.on_message(filters.command("ping"))
