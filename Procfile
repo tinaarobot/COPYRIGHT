@@ -1,1 +1,1 @@
-mrdaxx: python -m COPYRIGHT2
+mrdaxx: python -m SHIELD3
