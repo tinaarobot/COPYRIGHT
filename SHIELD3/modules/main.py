@@ -66,7 +66,7 @@ async def start(_, msg):
           InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
         ]
     ]
-     reply_markup = InlineKeyboardMarkup(buttons)
+    reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(random.choice(NYKAA), caption=start_txt,reply_markup=reply_markup
     )
