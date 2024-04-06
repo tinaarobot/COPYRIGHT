@@ -1,7 +1,7 @@
 {
   "name": "COPYRIGHT_PROTECTOR",
   "description": "Telegram Bot using Pyrogram",
-  "repository": "https://github.com/madara1188/Copyright-bot",
+  "repository": "https://github.com/sanju9636/Copyright",
   "env": {
     "API_ID": {
       "description": "Your Telegram API ID",
