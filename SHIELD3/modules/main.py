@@ -92,7 +92,7 @@ ROY_BTN = [
 
 
 @app.on_callback_query(filters.regex("cuteback"))
-async def cutebackbutton(client, CallbackQuery, _):
+async def cutebackbutton(client, callback_query: CallbackQuery, _):  # hehe
     startkeyboard = [
         [ 
           InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
@@ -105,10 +105,10 @@ async def cutebackbutton(client, CallbackQuery, _):
           InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
         ]
     ]
-    await CallbackQuery.edit_message_text(start_txt,
-            reply_markup = InlineKeyboardMarkup(startkeyboard)
+    await callback_query.message.edit_caption(start_txt,  # hmm
+            reply_markup=InlineKeyboardMarkup(startkeyboard)
             )
-    
+
     
 
 @app.on_callback_query(filters.regex("nykaa_back"))
