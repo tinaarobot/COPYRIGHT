@@ -59,8 +59,8 @@ async def start(_, msg):
           InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
         ],
         [
-          InlineKeyboardButton("ғᴇᴀᴛᴜʀᴇs", callback_data="nykaa_back"),
-          InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/roy_editx")
+          InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="nykaa_back"),
+          InlineKeyboardButton("ʜᴇʟᴘ", callback_data="roy_back")
         ],
         [
           InlineKeyboardButton("sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", callback_data="gib_source"),
@@ -135,7 +135,7 @@ async def activevc(_, message: Message):
         f"❅ ᴜsᴇᴅ ➠ {size_formatter(storage.used)}\n"
         f"❅ ғʀᴇᴇ ➠ {size_formatter(storage.free)}\n"
         f"❅ ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠ {python_version}\n\n"
-        f"✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠  ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐,"
+        f"✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠  ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐"
     )
 
     await message.reply(reply_text, quote=True)
