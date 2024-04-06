@@ -1,5 +1,5 @@
 {
-  "name": "telegram-bot-app",
+  "name": "COPYRIGHT_PROTECTOR",
   "description": "Telegram Bot using Pyrogram",
   "repository": "https://github.com/madara1188/Copyright-bot",
   "env": {
