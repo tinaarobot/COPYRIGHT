@@ -1,6 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from SHIELD3 import app
+from SHIELD3 import SHIELD3 as app
 from config import BOT_USERNAME
 
 start_txt = """
