@@ -1,10 +1,10 @@
 
  
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"> 
- <img src="https://readme-typing-svg.herokuapp.com?color=00FFFF&width=420&lines=💈+🄲🄾🄿🅈🅁🄸🄶🄷🅃+🅂🄷🄸🄴🄻🄳+🄱🄾🅃+💈">
+ <img src="https://readme-typing-svg.herokuapp.com?color=FFFFFF&width=420&lines=💈+🄲🄾🄿🅈🅁🄸🄶🄷🅃+🅂🄷🄸🄴🄻🄳+🄱🄾🅃+💈">
 
 
-**💮 ᴛᴇxᴛ ʙᴏᴛ ➠ [ 🄲🄾🄿🅈🅁🄸🄶🄷🅃 🅂🄷🄸🄴🄻🄳 🄱🄾🅃 ࿐](https://t.me/copyrightshieldbot)**
+**💮 ᴛᴇxᴛ ʙᴏᴛ ➠ [ 🄲🄾🄿🅈🅁🄸🄶🄷🅃 🅂🄷🄸🄴🄻🄳 🄱🄾🅃 ](https://t.me/copyrightshieldbot)**
 
 
 </h2>
