@@ -11,9 +11,9 @@ loop = asyncio.get_event_loop()
 async def daxxpapa_boot():
     for all_module in ALL_MODULES:
         importlib.import_module("SHIELD3.modules." + all_module)
-    print("𝖻𝗈𝗍 𝗌𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅 𝗌𝗍𝖺𝗋𝗍")
+    print("♥︎ 𝖻𝗈𝗍 𝗌𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅 𝗌𝗍𝖺𝗋𝗍")
     await idle()
-    print("𝖻𝖺𝗁𝖺𝗇𝖼𝗁𝗈𝖽 𝖯𝗂𝗋𝗈 𝖢𝗈𝖽𝖾𝗋 𝗄𝗋𝗅𝗈 𝖾𝖽𝗂𝗍 𝖺𝖺 𝗀𝗒𝖺 𝗇 𝖾𝗋𝗋𝗈𝗋 𝖺𝖺𝖻 𝗃𝖺𝗄𝖾 𝗀𝖺𝗇𝖽 𝗆𝖺𝗋𝗐𝖺𝗈 𝗂𝗌𝗌𝖾 @H_CC_HELP")
+    print("♥︎ ᴅᴏɴ'ᴛ ᴇᴅɪᴛ ʙᴀʙʏ, ᴏᴛʜᴇʀᴡɪsᴇ ʏᴏᴜ ɢᴇᴛ ᴀɴ ᴇʀʀᴏʀ.")
     await SHIELD3.send_message(LOGGER_ID, "**✦ ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ.\n\n✦ ᴊᴏɪɴ - @The_Friendz**")
 
 if __name__ == "__main__":
