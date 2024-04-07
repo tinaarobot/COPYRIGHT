@@ -76,7 +76,7 @@ async def start(_, msg):
 
 gd_buttons = [              
         [
-            InlineKeyboardButton("back", callback_data="cuteback"),
+            InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cuteback"),
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/THE_FRIENDZ"),    
         ]
         ]
@@ -84,8 +84,8 @@ gd_buttons = [
 
 ROY_BTN = [              
         [
-            InlineKeyboardButton("back", callback_data="cuteback"),
-            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/THE_FRIENDZ"),    
+            InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cuteback"),
+            InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/roy_editx"),    
         ]
 ]
 # ------------------------------------------------------------------------------- #
@@ -167,7 +167,7 @@ async def start(_, msg):
     
     reply_markup = InlineKeyboardMarkup(REPO_BTN)
     
-    await msg.reply_photo(random.choice(NYKAA), caption=REPO_STRING,reply_markup=reply_markup
+    await msg.reply_photo(photo="https://telegra.ph/file/feb8ec9cd6194018ccc4c.jpg", caption=REPO_STRING,reply_markup=reply_markup
                          )
 
 
@@ -242,7 +242,7 @@ async def delete_edited_messages(client, edited_message):
 # ----------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------
 def delete_long_messages(_, m):
-    return len(m.text.split()) > 10
+    return len(m.text.split()) > 200
 
 @app.on_message(filters.group & filters.private & delete_long_messages)
 async def delete_and_reply(_, msg):
