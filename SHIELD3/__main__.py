@@ -13,7 +13,7 @@ async def daxxpapa_boot():
         importlib.import_module("SHIELD3.modules." + all_module)
     print("♥︎ 𝖻𝗈𝗍 𝗌𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅 𝗌𝗍𝖺𝗋𝗍")
     await idle()
-    print("♥︎ ᴅᴏɴ'ᴛ ᴇᴅɪᴛ ʙᴀʙʏ, ᴏᴛʜᴇʀᴡɪsᴇ ʏᴏᴜ ɢᴇᴛ ᴀɴ ᴇʀʀᴏʀ.")
+    print("Don't edit baby, otherwise you get an error. @H_CC_HELP")
     await SHIELD3.send_message(LOGGER_ID, "**✦ ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ.\n\n✦ ᴊᴏɪɴ - @The_Friendz**")
 
 if __name__ == "__main__":
