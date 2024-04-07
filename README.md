@@ -1,18 +1,18 @@
 
  
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"> 
- <img src="https://readme-typing-svg.herokuapp.com?color=00FFFF&width=420&lines=🔅+Ⓝⓨⓚⓐⓐ+Ⓜⓤⓢⓘⓒ+Ⓑⓞⓣ+🔅">
+ <img src="https://readme-typing-svg.herokuapp.com?color=00FFFF&width=420&lines=💈+🄲🄾🄿🅈🅁🄸🄶🄷🅃+🅂🄷🄸🄴🄻🄳+🄱🄾🅃+💈">
 
 
-**🍇 ※ ᴛᴇxᴛ ʙᴏᴛ ➠ [ Ⓝ Ⓨ Ⓚ Ⓐ Ⓐ ࿐](https://t.me/Nykaaxbot)**
+**💮 ᴛᴇxᴛ ʙᴏᴛ ➠ [ 🄲🄾🄿🅈🅁🄸🄶🄷🅃 🅂🄷🄸🄴🄻🄳 🄱🄾🅃 ࿐](https://t.me/copyrightshieldbot)**
 
 
 </h2>
 <p align="center">
-  <img src="https://graph.org/file/ae479d362c7b3d8e2396c.jpg">
+  <img src="https://telegra.ph/file/feb8ec9cd6194018ccc4c.jpg">
 </p>
 
- <img src="https://readme-typing-svg.herokuapp.com?color=FF00FF&width=420&lines=💌+Ⓓⓔⓟⓛⓞⓨ+ⓞⓝ+Ⓗⓔⓡⓞⓚⓤ+Ⓝⓞⓦ+💌">
+ <img src="https://readme-typing-svg.herokuapp.com?color=FF00FF&width=420&lines=💌+🄳🄴🄿🄻🄾🅈+🄾🄽+🄷🄴🅁🄾🄺🅄+🄽🄾🅆+💌">
 
 
 <h3 align="center">
