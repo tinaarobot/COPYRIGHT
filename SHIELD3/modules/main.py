@@ -76,7 +76,7 @@ async def start(_, msg):
 
 gd_buttons = [              
         [
-            InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cuteback"),
+            InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/roy_editx"),
             InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/THE_FRIENDZ"),    
         ]
         ]
@@ -84,7 +84,7 @@ gd_buttons = [
 
 ROY_BTN = [              
         [
-            InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="cuteback"),
+            InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/the_friendz"),
             InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/roy_editx"),    
         ]
 ]
@@ -149,11 +149,11 @@ async def roy_back(_, query: CallbackQuery):
 
 # ------------------------------------------------------------------------------- #
 REPO_STRING = """**
-✦ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ...
+❍ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ...
 
-❅ ɪ ᴀᴍ ᴄᴏᴘʏʀɪɢʜᴛ sʜɪᴇʟᴅ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ʙᴏᴛ.
+❍ ɪ ᴀᴍ ᴄᴏᴘʏʀɪɢʜᴛ sʜɪᴇʟᴅ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ʙᴏᴛ.
 
-❅ ɪғ ʏᴏᴜ ᴡᴀɴᴛ **ᴄᴏᴘʏʀɪɢʜᴛ sʜɪᴇʟᴅ** ʙᴏᴛ ʀᴇᴘᴏ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʀᴇᴘᴏ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.**
+❍ ɪғ ʏᴏᴜ ᴡᴀɴᴛ **ᴄᴏᴘʏʀɪɢʜᴛ sʜɪᴇʟᴅ** ʙᴏᴛ ʀᴇᴘᴏ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʀᴇᴘᴏ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.**
 """
 
 @app.on_message(filters.command("repo"))
