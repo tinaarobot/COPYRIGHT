@@ -220,12 +220,12 @@ async def handle_message(client, message):
     if any(keyword in message.text for keyword in FORBIDDEN_KEYWORDS):
         logging.info(f"✦ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ {message.id}")
         await message.delete()
-       user_mention = from_user.mention
+       user_mention = msg.from_user.mention
         await message.reply_text(f"✦ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ ɴᴇxᴛ ᴛɪᴍᴇ.")
     if any(keyword in message.caption for keyword in FORBIDDEN_KEYWORDS):
         logging.info(f"✦ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ {message.id}")
         await message.delete()
-        user_mention = message_from_user.mention
+        user_mention = msg.from_user.mention
         await message.reply_text(f"✦ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ, ɴᴇxᴛ ᴛɪᴍᴇ.")
         
 # -------------------------------------------------------------------------------------
@@ -263,25 +263,4 @@ async def delete_pdf_files(client, message):
 async def message_handler(client, message):
     await delete_pdf_files(client, message)
 
-# ----------------------------------------
 
-@app.on_callback_query(filters.regex("gib_source"))
-async def gib_repo_callback(_, callback_query):
-    await callback_query.edit_message_media(
-        media=InputMediaVideo("https://telegra.ph/file/9235d57807362b4e227a3.mp4", has_spoiler=True),
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [close_button]
-            ]
-        ),
-        )
-close_button = InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
-
-@app.on_callback_query(filters.regex("close"))
-async def close_menu(_, CallbackQuery):
-    try:
-        await CallbackQuery.message.delete()
-        await CallbackQuery.answer()
-    except:
-        return
-        
