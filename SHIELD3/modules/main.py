@@ -50,7 +50,7 @@ NYKAA = [
 ]
 
 
-start_txt = """<b> ❍ ʜɪɪ ʙᴀʙʏ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ !\n━━━━━━━━━━━━━━━━━━━━━━\n\n❍ ɪ ᴀᴍ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴄᴏᴘʏʀɪɢʜᴛ ʙᴏᴛ.\n\n❍ ɪ ʜᴀᴠᴇ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs.\n\n❍ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐ </b>"""
+start_txt = """<b> ❖ ʜɪɪ ʙᴀʙʏ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ !\n━━━━━━━━━━━━━━━━━━━━━━\n\n● ɪ ᴀᴍ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ᴄᴏᴘʏʀɪɢʜᴛ ʙᴏᴛ.\n● ɪ ʜᴀᴠᴇ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs.\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐ </b>"""
 
 @app.on_message(filters.command("start"))
 async def start(_, msg):
@@ -124,12 +124,12 @@ async def nykaa_back(_, query: CallbackQuery):
 # -------------------------------------------------------------------------------------
 
 
-ABOUT_STRING = """**✦ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs.\n\n❍ ɴᴏ ᴘᴏʀɴᴏɢʀᴀᴘʜʏ \n❍ ɴᴏ ᴍᴇssᴀɢᴇ ᴇᴅɪᴛ\n❍ ɴᴏ ᴘᴅғ ғɪʟᴇ sʜᴀʀᴇ\n❍ ɴᴏ ʟᴏɴɢ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ\n❍ ɴᴏ sᴘᴀᴍᴍᴇʀ ʀᴇᴘᴏʀᴛs\n❍ ɴᴏ ɴᴄᴇʀᴛ ᴄᴏɴᴛᴇsᴛ\n\n✦ ᴀɴᴅ ᴍᴏʀᴇ ᴄᴏɴᴛᴇsᴛs ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ, ғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ.**"""
+ABOUT_STRING = """**❖ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ ғᴇᴀᴛᴜʀᴇs.\n\n● ɴᴏ ᴘᴏʀɴᴏɢʀᴀᴘʜʏ \n● ɴᴏ ᴍᴇssᴀɢᴇ ᴇᴅɪᴛ\n● ɴᴏ ᴘᴅғ ғɪʟᴇ sʜᴀʀᴇ\n● ɴᴏ ʟᴏɴɢ ᴛᴇxᴛ ᴍᴇssᴀɢᴇ\n● ɴᴏ sᴘᴀᴍᴍᴇʀ ʀᴇᴘᴏʀᴛs\n● ɴᴏ ɴᴄᴇʀᴛ ᴄᴏɴᴛᴇsᴛ\n\n❖ ᴀɴᴅ ᴍᴏʀᴇ ᴄᴏɴᴛᴇsᴛs ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ, ғᴜʟʟ ɢʀᴏᴜᴘ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ.**"""
 
 
 # -------------------------------------------------------------------------------------
 
-HELP_STRING = """**✽ ᴏᴡɴᴇʀ/sᴜᴅᴏ ᴜsᴇʀ ᴄᴍᴅs ⏤͟͟͞͞★\n\n❍ /bcast ➠ ʙʀᴏᴀᴅᴄᴀsᴛ ᴀɴʏ ᴍᴇssᴀɢᴇ.\n❍ /announce ➠ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀɴɴᴏᴜɴᴄᴇ.\n\n✽ ᴀʟʟ ᴜsᴇʀs  ᴄᴏᴍᴍᴀɴᴅs ⏤͟͟͞͞★\n\n❍ /start ➠ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ.\n❍ /ping ➠ ᴄʜᴋ ʙᴏᴛ ᴘɪɴɢ sᴛᴀᴛs.\n❍ /repo ➠ ɢᴇᴛ ʙᴏᴛ ʀᴇᴘᴏ.\n\n❍ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠  ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐**"""
+HELP_STRING = """**❖ ᴏᴡɴᴇʀ/sᴜᴅᴏ ᴜsᴇʀ ᴄᴍᴅs ⏤͟͟͞͞★\n\n● /bcast ➥ ʙʀᴏᴀᴅᴄᴀsᴛ ᴀɴʏ ᴍᴇssᴀɢᴇ.\n● /announce ➥ ʀᴇᴘʟʏ ᴀɴʏ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀɴɴᴏᴜɴᴄᴇ.\n\n❖ ᴀʟʟ ᴜsᴇʀs  ᴄᴏᴍᴍᴀɴᴅs ⏤͟͟͞͞★\n\n● /start ➥ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ.\n● /ping ➥ ᴄʜᴋ ʙᴏᴛ ᴘɪɴɢ sᴛᴀᴛs.\n● /repo ➥ ɢᴇᴛ ʙᴏᴛ ʀᴇᴘᴏ.\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥  ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐**"""
 
 # ------------------------------------------------------------------------------- #
 
@@ -199,14 +199,14 @@ async def activevc(_, message: Message):
     python_version = platform.python_version()
 
     reply_text = (
-        f"✦ ᴄᴏᴘʏʀɪɢʜᴛ ʙᴏᴛ ᴘɪɴɢ sᴛᴀᴛs ✦\n\n"
-        f"❅ ᴜᴘᴛɪᴍᴇ ➠ {uptime}\n"
-        f"❅ ᴄᴘᴜ ➠ {cpu}%\n"
-        f"❅ ᴛᴏᴛᴇʟ ꜱᴛᴏʀᴀɢᴇ ➠ {size_formatter(storage.total)}\n"
-        f"❅ ᴜsᴇᴅ ➠ {size_formatter(storage.used)}\n"
-        f"❅ ғʀᴇᴇ ➠ {size_formatter(storage.free)}\n"
-        f"❅ ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠ {python_version}\n\n"
-        f"✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠  ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐"
+        f"❖ ᴄᴏᴘʏʀɪɢʜᴛ ʙᴏᴛ ᴘɪɴɢ sᴛᴀᴛs ⏤͟͟͞͞★\n\n"
+        f"● ᴜᴘᴛɪᴍᴇ ➥ {uptime}\n"
+        f"● ᴄᴘᴜ ➥ {cpu}%\n"
+        f"● ᴛᴏᴛᴇʟ ꜱᴛᴏʀᴀɢᴇ ➥ {size_formatter(storage.total)}\n"
+        f"● ᴜsᴇᴅ ➥ {size_formatter(storage.used)}\n"
+        f"● ғʀᴇᴇ ➥ {size_formatter(storage.free)}\n"
+        f"● ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➥ {python_version}\n\n"
+        f"❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥  ʀ ᴏ ʏ - ᴇ ᴅ ɪ ᴛ x ࿐"
     )
 
     await message.reply(reply_text, reply_markup=InlineKeyboardMarkup(EVAA), quote=True)
@@ -218,15 +218,15 @@ FORBIDDEN_KEYWORDS = ["porn", "xxx", "sex", "NCERT", "XII", "page", "Ans", "meio
 @app.on_message()
 async def handle_message(client, message):
     if any(keyword in message.text for keyword in FORBIDDEN_KEYWORDS):
-        logging.info(f"✦ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ {message.id}")
+        logging.info(f"⬤ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ ➥ {message.id}")
         await message.delete()
        user_mention = msg.from_user.mention
-        await message.reply_text(f"✦ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ ɴᴇxᴛ ᴛɪᴍᴇ.")
+        await message.reply_text(f"⬤ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ ɴᴇxᴛ ᴛɪᴍᴇ.")
     if any(keyword in message.caption for keyword in FORBIDDEN_KEYWORDS):
-        logging.info(f"✦ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ {message.id}")
+        logging.info(f"⬤ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ ➥ {message.id}")
         await message.delete()
         user_mention = msg.from_user.mention
-        await message.reply_text(f"✦ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ, ɴᴇxᴛ ᴛɪᴍᴇ.")
+        await message.reply_text(f"⬤ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ, ɴᴇxᴛ ᴛɪᴍᴇ.")
         
 # -------------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------------
@@ -245,7 +245,7 @@ def delete_long_messages(_, m):
 async def delete_and_reply(_, msg):
     await msg.delete()
     user_mention = msg.from_user.mention
-    await app.send_message(msg.chat.id, f"✦ ʜᴇʏ {user_mention} ʙᴀʙʏ, ᴘʟᴇᴀsᴇ ᴋᴇᴇᴘ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ sʜᴏʀᴛ.")
+    await app.send_message(msg.chat.id, f"⬤ ʜᴇʏ {user_mention} ʙᴀʙʏ, ᴘʟᴇᴀsᴇ ᴋᴇᴇᴘ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ sʜᴏʀᴛ.")
     
 
 # -----------------------------------------------------------------------------------
@@ -253,7 +253,7 @@ async def delete_and_reply(_, msg):
 
 async def delete_pdf_files(client, message):
     if message.document and message.document.mime_type == "application/pdf":
-        warning_message = f"✦ ʜᴇʏ {user_mention} ᴅᴏɴ'ᴛ sᴇɴᴅ ᴘᴅғ ғɪʟᴇs ʙᴀʙʏ, ғᴏʀ ᴄᴏᴘʏʀɪɢʜᴛ ᴄʟɪᴍʙ."
+        warning_message = f"⬤ ʜᴇʏ {user_mention} ᴅᴏɴ'ᴛ sᴇɴᴅ ᴘᴅғ ғɪʟᴇs ʙᴀʙʏ, ғᴏʀ ᴄᴏᴘʏʀɪɢʜᴛ ᴄʟɪᴍʙ."
         await message.reply_text(warning_message)
         await message.delete()
     else:  
