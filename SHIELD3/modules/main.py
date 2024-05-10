@@ -219,12 +219,12 @@ async def handle_message(client, message):
     if any(keyword in message.text for keyword in FORBIDDEN_KEYWORDS):
         logging.info(f"⬤ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ ➥ {message.id}")
         await message.delete()
-       user_mention = msg.from_user.mention
+      # user_mention = msg.from_user.mention
         await message.reply_text(f"⬤ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ ɴᴇxᴛ ᴛɪᴍᴇ.")
     if any(keyword in message.caption for keyword in FORBIDDEN_KEYWORDS):
         logging.info(f"⬤ ᴅᴇʟᴇᴛɪɴɢ ᴍᴇssᴀɢᴇ ᴡɪᴛʜ ɪᴅ ➥ {message.id}")
         await message.delete()
-        user_mention = msg.from_user.mention
+        #user_mention = msg.from_user.mention
         await message.reply_text(f"⬤ ʜᴇʏ {user_mention}, ʙᴀʙʏ ᴅᴏɴ'ᴛ sᴇɴᴅ, ɴᴇxᴛ ᴛɪᴍᴇ.")
         
 # -------------------------------------------------------------------------------------
@@ -243,7 +243,7 @@ def delete_long_messages(_, m):
 @app.on_message(filters.group & filters.private & delete_long_messages)
 async def delete_and_reply(_, msg):
     await msg.delete()
-    user_mention = msg.from_user.mention
+    #user_mention = msg.from_user.mention
     await app.send_message(msg.chat.id, f"⬤ ʜᴇʏ {user_mention} ʙᴀʙʏ, ᴘʟᴇᴀsᴇ ᴋᴇᴇᴘ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ sʜᴏʀᴛ.")
     
 
